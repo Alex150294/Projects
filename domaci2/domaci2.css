@@ -1,0 +1,61 @@
+
+button {
+    background-color: #050100; 
+    color: #3ac9cf; 
+    border: none;
+    border-radius: 12px; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: block; 
+    font-size: 16px;
+    margin: auto; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 200px; 
+}
+
+button:hover {
+    background-color: #ee4a21; 
+    transform: scale(1.05); 
+}
+
+#rezultat1, #rezultat2, #rezultat3, #rezultat4, #rezultat5, #rezultat6, #rezultat7 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+#buttons {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 50px; 
+    width: 100%; 
+    text-align: center; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #080d61;
+}
+
+
+#snowCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none;
+}

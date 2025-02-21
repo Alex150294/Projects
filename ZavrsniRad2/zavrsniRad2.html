@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<htm>
+<head>
+    
+    <title>AJAX</title>
+	<link rel="stylesheet" href="zavrsniRad2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #data {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX Primer: Uzimanje Podataka</h1>
+    <p>Kliknite dugme ispod da ucitate podatke:</p>
+    <button id="loadDataBtn">Ucitaj Podatke</button>   <--dugme za pokretanje zahteva 
+
+    <div id="data">
+        
+    </div>
+
+    <script>
+       
+        const loadDataBtn = document.getElementById('loadDataBtn');
+        const dataContainer = document.getElementById('data');
+
+        
+        loadDataBtn.addEventListener('click', () => {
+           
+            const xhr = new XMLHttpRequest();
+
+           
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
+
+          
+            xhr.onload = function() {
+                if (xhr.status === 200) { 
+                    
+                    const users = JSON.parse(xhr.responseText);
+
+                    
+                    dataContainer.innerHTML = '';
+
+                   
+                    users.forEach(user => {
+                        const userDiv = document.createElement('div');
+                        userDiv.className = 'item';
+                        userDiv.innerHTML = `<strong>Name:</strong> ${user.name} <br> <strong>Email:</strong> ${user.email}`;
+                        dataContainer.appendChild(userDiv);
+                    });
+                } else {
+                    dataContainer.innerHTML = `Error: Unable to fetch data. Status: ${xhr.status}`;
+                }
+            };
+
+            // Handle network or server errors
+            xhr.onerror = function() {
+                dataContainer.innerHTML = 'Network Error: Unable to fetch data.';
+            };
+
+            // Send the request
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

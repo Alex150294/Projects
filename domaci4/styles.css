@@ -1,0 +1,44 @@
+<style>
+        /* Stilizacija tabele */
+        table {
+            width: 60%;
+            margin: 30px auto; /* Centriraj tabelu */
+            border-collapse: collapse; /* Spoji ivice ćelija */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodaj malu senku oko tabele */
+        }
+
+        /* Stilizacija naslova u tabeli */
+        th {
+            background-color: #4CAF50; /* Zelena pozadina za naslove */
+            color: white; /* Bela boja teksta */
+            padding: 10px 15px; /* Razmak unutar ćelije */
+            text-align: left; /* Poravnaj tekst ulevo */
+        }
+
+        /* Stilizacija redova u tabeli */
+        td {
+            padding: 10px 15px; /* Razmak unutar ćelije */
+            text-align: center; /* Poravnaj tekst u centru */
+            border: 1px solid #ddd; /* Siva ivica oko ćelija */
+        }
+
+        /* Stilizacija redova kada se pređe mišem preko njih */
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Svetlo siva pozadina za parne redove */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Meni preletanja mišem preko reda */
+        }
+
+        /* Stilizacija tabele za veće ekrane */
+        @media (max-width: 768px) {
+            table {
+                width: 90%; /* Tabela zauzima 90% širine ekrana na manjim uređajima */
+            }
+
+            th, td {
+                padding: 8px; /* Manji razmak za mobilne uređaje */
+            }
+        }
+    </style>

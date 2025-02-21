@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #050404;
+    color: #2d39a9;
+    margin: 20px;
+}
+#data {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+.item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+	background-color: #e9f838;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #2d39a9;
+}

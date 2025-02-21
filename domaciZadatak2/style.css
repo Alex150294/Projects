@@ -1,0 +1,45 @@
+/* Resetovanje margina i paddinga za sve elemente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Osnovni stil za telo stranice */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Stilizovanje dugmadi */
+button {
+    background-color: #007bff; /* Plava boja pozadine */
+    color: white; /* Belo slovo */
+    border: none; /* Bez ivica */
+    padding: 10px 20px; /* Unutrašnji razmak */
+    font-size: 16px; /* Veličina fonta */
+    cursor: pointer; /* Kursor u obliku ruke kada se pređe preko dugmeta */
+    border-radius: 5px; /* Zaobljeni ivici */
+    margin: 10px; /* Razmak između dugmadi */
+    transition: background-color 0.3s, color 0.3s; /* Glatka promena boja */
+}
+
+/* Stil kada se pređe mišem preko dugmadi */
+button:hover {
+    background-color: #0056b3; /* Tamnija plava boja kada se pređe mišem */
+    color: yellow; /* Žuta boja slova kada se pređe mišem */
+}
+
+/* Stilizovanje naslova na novoj stranici */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Dodavanje stila za centriranje dugmadi i naslova */
+button, h1 {
+    display: inline-block;
+    margin-top: 10px;
+}
